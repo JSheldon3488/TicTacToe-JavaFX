@@ -16,8 +16,6 @@ import javafx.scene.text.Font
 import javafx.scene.text.Text
 import javafx.util.Duration
 
-//I think there might be a better way to store the board and check for winners
-//Need a different way to check for winners
 
 class TicTacToeApp: Application(){
     var playerTurn = "X"
@@ -30,7 +28,7 @@ class TicTacToeApp: Application(){
         //Setup the main window
         window.setPrefSize(600.0, 600.0)
 
-        //Create the TicTacToe squares for the window and initialize baord
+        //Create the TicTacToe squares for the window and initialize board
         for(i in 0..2){
             for(j in 0..2){
                 val square = TTTSquare()
@@ -125,7 +123,6 @@ class TicTacToeApp: Application(){
         }
 
     }
-    //I feel like this could potentially be refactored and the functionality doesn't need to be in it's own class
     class Combo(vararg tiles: TTTSquare) {
         var tilesToCheck = arrayListOf(*tiles)
 
